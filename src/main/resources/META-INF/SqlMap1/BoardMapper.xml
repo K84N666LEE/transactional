@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.erp.board.BoardMapper">
+
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <!--                                                                                                                                 -->
+  <!--  BBS BOARD                                                                                                                      -->
+  <!--                                                                                                                                 -->
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+  <!-- 트랜잭션 -->
+
+  <update id="update_succ1" parameterType="com.erp.vo.bbs_board">
+
+    /* update_succ1 */
+
+    UPDATE bbs_board 
+       SET bbs_subject = 'XXXXXXXXXXXXXX'
+     WHERE bbs_num = 813
+
+  </update>
+
+  <update id="update_succ2" parameterType="com.erp.vo.bbs_board">
+
+    /* update_succ2 */
+
+    UPDATE bbs_board 
+       SET bbs_subject = '나오면안됨!'
+     WHERE bbs_num = 813
+
+  </update>
+
+  <update id="update_error" parameterType="com.erp.vo.bbs_board">
+
+    /* update_error */
+
+    UPDATE bbs_board
+       SET bbs_subject_xxxxxxxxx = 'XXXXXXXXXXXXXX'
+     WHERE bbs_num = 813
+
+  </update>
+
+</mapper>

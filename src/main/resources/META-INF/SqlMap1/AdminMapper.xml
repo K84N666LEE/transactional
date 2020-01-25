@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.erp.admin.AdminMapper">
+
+	<update id="admin_update" parameterType="com.erp.vo.mem_admin">
+
+		/* admin_update */
+
+		UPDATE mem_admin SET
+
+			mad_tel       = 'xxxxxxxxxxxxx' ,
+			mad_hp        = 'yyyyyyyyyyyyy' ,
+			mad_update_d  = now()           ,
+			mad_rmk       = 'N'
+
+		WHERE
+		    mad_num      =          2
+
+	</update>
+
+</mapper>
