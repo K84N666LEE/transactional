@@ -19,7 +19,6 @@ public class BoardController
 
     private static final Logger  logger = LoggerFactory.getLogger(BoardController.class);
 
-	// transaction + myBatis
     @RequestMapping(value="/", method={RequestMethod.POST,RequestMethod.GET})
     public String tran
     (

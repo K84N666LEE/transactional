@@ -50,5 +50,26 @@
 		  FROM bbs_board
 	
 	</select>
+
+
+	<insert id="insert_ndm_file" parameterType="com.erp.vo.ndm_file">
+
+		/* insert_ndm_file */
+
+		INSERT INTO ndm_file
+		(
+			  ndm_1    
+			, ndm_2    
+			, ndm_3    
+		)
+		VALUES
+		(
+			  #{ndm_1}
+			, #{ndm_2}
+			, #{ndm_3}
+		)
+
+	</insert>
+	
 	
 </mapper>

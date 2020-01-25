@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.erp.admin.AdminMapper;
 import com.erp.vo.bbs_board;
 import com.erp.vo.mem_admin;
+import com.erp.vo.ndm_file;
 
 @Service
 @Transactional("tm1")
@@ -30,5 +31,10 @@ public class BoardServiceImpl implements BoardService
 	@Override
 	public int board_total(bbs_board board) {
 		return boardMapper.board_total(board);
+	}
+
+	@Override
+	public void insert_ndm_file(ndm_file ndm) {
+		boardMapper.insert_ndm_file(ndm);
 	}
 }
