@@ -26,4 +26,9 @@ public class BoardServiceImpl implements BoardService
 		boardMapper.update_succ2 ( board );
 		boardMapper.update_error ( board );
 	}
+
+	@Override
+	public int board_total(bbs_board board) {
+		return boardMapper.board_total(board);
+	}
 }

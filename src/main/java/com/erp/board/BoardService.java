@@ -6,4 +6,5 @@ import com.erp.vo.mem_admin;
 public interface BoardService
 {
 	public void testTransaction ( mem_admin admin, bbs_board board );
+	public int  board_total     (                  bbs_board board );
 }

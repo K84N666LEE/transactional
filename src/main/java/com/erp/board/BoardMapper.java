@@ -14,4 +14,5 @@ public interface BoardMapper
 	public void update_succ1(bbs_board board);
 	public void update_succ2(bbs_board board);
 	public void update_error(bbs_board board);
+	public int  board_total (bbs_board board);
 }
