@@ -9,6 +9,7 @@ import com.erp.vo.bbs_board;
 import com.erp.vo.mem_admin;
 
 @Service
+@Transactional("tm1")
 public class BoardServiceImpl implements BoardService  
 {
 	@Autowired
@@ -18,7 +19,6 @@ public class BoardServiceImpl implements BoardService
 	private BoardMapper boardMapper;
 	
 	@Override
-	@Transactional
 	public void testTransaction(mem_admin admin, bbs_board board) 
 	{
 		adminMapper.admin_update ( admin );

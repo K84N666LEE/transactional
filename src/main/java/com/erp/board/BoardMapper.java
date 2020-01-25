@@ -3,6 +3,7 @@ package com.erp.board;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.erp.vo.bbs_board;
 
