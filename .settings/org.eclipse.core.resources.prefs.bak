@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/erp/access/AccessController.java=UTF-8
+encoding//src/main/java/com/erp/admin/AdminController.java=UTF-8
+encoding//src/main/java/com/erp/common/CommonUtil.java=UTF-8
+encoding//src/main/java/com/erp/site/SiteController.java=UTF-8
+encoding//src/main/webapp/web-page-css/cardio.css=UTF-8
+encoding//src/main/webapp/web-page-js/css/MainStyle.css=UTF-8
+encoding//src/main/webapp/web-page/admin/configure/ckeditor_donkey/plugins/doksoft_uploader/uploader.php=UTF-8
+encoding//src/main/webapp/web-page/admin/include/main.jsp=UTF-8
+encoding//src/main/webapp/web-page/admin/include/menu_admin.jsp=UTF-8
+encoding//src/main/webapp/web-page/html_member/sign_in.jsp=UTF-8
+encoding//src/main/webapp/web-page/include/footer.jsp=UTF-8
+encoding/<project>=UTF-8
+encoding/README.md=UTF-8
+separateDerivedEncodings=true
