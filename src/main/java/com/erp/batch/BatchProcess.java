@@ -49,19 +49,51 @@ public class BatchProcess
         board.setBbs_num(813);
         logger.debug("Fixed rate task - " + System.currentTimeMillis() / 1000);
     }
+
+    public void file_Read(String fileDir) throws IOException
+    {
+		File f = new File(fileDir);
+		String fileName = f.getName();
+		String filePath = f.getPath();
+		System.out.println( "fileName : " + fileName );
+		System.out.println( "filePath : " + filePath );
+    }
     
 	@Test
 	//@Scheduled(fixedDelay = 50000)
 	public void whenReadWithBufferedReader_thenCorrect() throws IOException
 	//public static void main( String[] args ) throws IOException
 	{
+		File path = new File("C:/Temp/");
+		String fileList[] = path.list((dir, name) -> name.endsWith("txt"));
+
+		for (String fileName : fileList) 
+		{
+			System.out.println("--------->> " + fileName);
+			file_Read("C:/Temp/"+fileName);
+		}
+
+/*
 		bbs_board bbs = new bbs_board();
-		String file ="C:/Temp/sample.txt";
-		  
-		BufferedReader     reader = new BufferedReader(new FileReader(file));
+		String fileDir ="C:/Temp/KBS_20200201_1234.txt";
+
+		File f = new File(fileDir);
+		String fileName = f.getName();
+		String filePath = f.getPath();
+		System.out.println( "fileName : " + fileName );
+		System.out.println( "filePath : " + filePath );
+		
+		String FILE_SP[] = fileName.split("_");
+
+		System.out.println( "filePath : " + FILE_SP[0] );
+		System.out.println( "filePath : " + FILE_SP[1] );
+		System.out.println( "filePath : " + FILE_SP[2] );
+
+		BufferedReader     reader = new BufferedReader(new FileReader(fileDir));
 		StringBuilder     builder = new StringBuilder();
 		String        currentLine = reader.readLine();
 		String []           PARAM = null;
+		int                 count = 0;
 		
 		while (currentLine != null) 
 		{
@@ -79,15 +111,18 @@ public class BatchProcess
 
 		    //boardService.insert_ndm_file(ndm);
 		    //System.out.println( "===> " + PARAM[0] + " - " + PARAM[1] + " - " + PARAM[2] );
+		    count++;
+		    if( count > 10 ) break;
 		}
 		reader.close();
+*/
 	}
 
 	/**
 	 * File Reader : memory leak 방지
 	 */
 	//@Scheduled (fixedRate = 10000) 
-	@Test 
+	//@Test 
 	public void testSchedulerTask()
 	{
 		String FilePath = "C:/Temp/CPU_RANK.txt";
@@ -131,20 +166,20 @@ public class BatchProcess
 			}
 			catch (IOException e)
 			{
-				logger.debug("IOException-1");
+				logger.debug("IOException 1");
 			}
 			finally
 			{
 				if( br != null )
 				{
 					try                   { br.close();                    } 
-					catch (IOException e) { logger.debug("IOException-2"); }
+					catch (IOException e) { logger.debug("IOException 2"); }
 				}
 	
 				if( fr != null )
 				{
 					try                   { fr.close();                    } 
-					catch (IOException e) { logger.debug("IOException-3"); }				
+					catch (IOException e) { logger.debug("IOException 3"); }				
 				}
 			}
 		}
